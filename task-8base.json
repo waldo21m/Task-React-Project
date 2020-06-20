@@ -1,0 +1,325 @@
+{
+	"info": {
+		"_postman_id": "f3d09068-7d2c-4539-9c25-ed2a885f2aab",
+		"name": "Task 8base",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Task List",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1qazNPVEZGTmtGQlEwRTNNa0pGT0RNeE1qUTJSamMzUVRRM1JqRTFSalF3UkRNME5qVkVSQSJ9.eyJodHRwczovLzhiYXNlLmNvbS92aXNpdG9yX2lkIjoiY2EzMWJkMTUtZjk2My00NmRiLTk4NWItMDIxZDQzMjEyZjdmIiwiaHR0cHM6Ly84YmFzZS5jb20vY3JlYXRlZF9hdCI6IjIwMjAtMDYtMTVUMTg6MDg6MTcuNDA3WiIsImdpdmVuX25hbWUiOiJFZHVhcmRvIiwiZmFtaWx5X25hbWUiOiJNw6FycXVleiIsIm5pY2tuYW1lIjoiZWR1YXJkbzIwLjMyNjMiLCJuYW1lIjoiRWR1YXJkbyBNw6FycXVleiIsInBpY3R1cmUiOiJodHRwczovL3MuZ3JhdmF0YXIuY29tL2F2YXRhci8xNGM3OGE2MGU2OWVhNWRiODc4Yjc3ZjZkMWRhYmE0ZT9zPTQ4MCZyPXBnJmQ9aHR0cHMlM0ElMkYlMkZjZG4uYXV0aDAuY29tJTJGYXZhdGFycyUyRmVkLnBuZyIsInVwZGF0ZWRfYXQiOiIyMDIwLTA2LTE5VDIyOjEwOjUxLjkxNVoiLCJlbWFpbCI6ImVkdWFyZG8yMC4zMjYzQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJpc3MiOiJodHRwczovLzhiYXNlLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZWU3YjkxMTNjMjYxYzAwMTM3OTFlZDciLCJhdWQiOiJxR0haVnU1Q3hZNWtsaXZtMjhPUExqb3B2c1lwMGJhRCIsImlhdCI6MTU5MjYwNDY1MiwiZXhwIjoxNTkyNjQwNjUyfQ.fAy8GCCtdhwuhY4vbsNUYmsRRsT1dfnsok1Lg30qtHBFbaIo6G3I3_3-sv_9QjIIaTPdYv1re70VwfYm8V43kQ2A1z_ZU4iynjjxVN7n2-b1Ms-0W_Kyzgr7Dy47_0kL3bydTVIKOWbtY04FJSVrSoZBe5mdLMZHhuSg_7hNu6I50wrzaXf1c-Z9_k_Ee1Y5jWk3FlaEr4aJJTtHHe7jMiCSFDJeE80h_z-SN68OrIbkOHa29NtzYlNzznz-0MZwTerFtpAU-YUpG_488mUbfxi9sPuatz2bUJotypB2YUnDmDt664bRyfe_D_brFonaUEqhQ7RjwFTPGDy-JCDOAw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\r\n  tasksList {\r\n    items {\r\n      id\r\n      name\r\n      description\r\n      isCompleted\r\n      users {\r\n        email\r\n        firstName\r\n        lastName\r\n      }\r\n      createdAt\r\n      updatedAt\r\n      createdBy {\r\n        email\r\n        firstName\r\n        lastName\r\n      }\r\n    }\r\n  }\r\n}",
+						"variables": ""
+					},
+					"options": {
+						"graphql": {}
+					}
+				},
+				"url": {
+					"raw": "https://api.8base.com/ckbgtagfz000207mgbb8o96pc",
+					"protocol": "https",
+					"host": [
+						"api",
+						"8base",
+						"com"
+					],
+					"path": [
+						"ckbgtagfz000207mgbb8o96pc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1qazNPVEZGTmtGQlEwRTNNa0pGT0RNeE1qUTJSamMzUVRRM1JqRTFSalF3UkRNME5qVkVSQSJ9.eyJodHRwczovLzhiYXNlLmNvbS92aXNpdG9yX2lkIjoiY2EzMWJkMTUtZjk2My00NmRiLTk4NWItMDIxZDQzMjEyZjdmIiwiaHR0cHM6Ly84YmFzZS5jb20vY3JlYXRlZF9hdCI6IjIwMjAtMDYtMTVUMTg6MDg6MTcuNDA3WiIsImdpdmVuX25hbWUiOiJFZHVhcmRvIiwiZmFtaWx5X25hbWUiOiJNw6FycXVleiIsIm5pY2tuYW1lIjoiZWR1YXJkbzIwLjMyNjMiLCJuYW1lIjoiRWR1YXJkbyBNw6FycXVleiIsInBpY3R1cmUiOiJodHRwczovL3MuZ3JhdmF0YXIuY29tL2F2YXRhci8xNGM3OGE2MGU2OWVhNWRiODc4Yjc3ZjZkMWRhYmE0ZT9zPTQ4MCZyPXBnJmQ9aHR0cHMlM0ElMkYlMkZjZG4uYXV0aDAuY29tJTJGYXZhdGFycyUyRmVkLnBuZyIsInVwZGF0ZWRfYXQiOiIyMDIwLTA2LTE5VDEyOjAyOjI4LjMxM1oiLCJlbWFpbCI6ImVkdWFyZG8yMC4zMjYzQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJpc3MiOiJodHRwczovLzhiYXNlLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZWU3YjkxMTNjMjYxYzAwMTM3OTFlZDciLCJhdWQiOiJxR0haVnU1Q3hZNWtsaXZtMjhPUExqb3B2c1lwMGJhRCIsImlhdCI6MTU5MjU2ODE0OCwiZXhwIjoxNTkyNjA0MTQ4fQ.Rbpt8aGtOdFKFjG-m41EpS-3JZ8JfEsor-Knp16DyceiTyjXWEyzAIdx3LqSrKBxFPn9novFbegPB_Q1moYWvh5Bm1ZW1Ch8PM8LBMQxHGveVbraHP_9u2Fa6JGDiy7iL94TTD_q5c2qf7ilYOhXPvQteWOxuBNq5nirVwng6j7zCOzLZ7qkAkQ2Uz8LU7vWKZMjA-1CjpgUNZL73-qhjmt9Sl8Dhnm5ZO6h2ii71ybPEe41C2Gln1OMvMwhAaw-ArUDSNhXPKBP_evVKarVkiSGz1IJidGY-PCmMszRNiexNl2d_2xLNyEm3901OEOP0IQef_o_AA5d1Q3aS4rExQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\r\n  task(id: \"ckbj5owrp00vj08mm11daddqm\") {\r\n    id\r\n    name\r\n    description\r\n    isCompleted\r\n    users {\r\n      email\r\n      firstName\r\n      lastName\r\n    }\r\n    createdAt\r\n    updatedAt\r\n    createdBy {\r\n      email\r\n      firstName\r\n      lastName\r\n    }\r\n  }\r\n}\r\n",
+						"variables": ""
+					},
+					"options": {
+						"graphql": {}
+					}
+				},
+				"url": {
+					"raw": "https://api.8base.com/ckbgtagfz000207mgbb8o96pc",
+					"protocol": "https",
+					"host": [
+						"api",
+						"8base",
+						"com"
+					],
+					"path": [
+						"ckbgtagfz000207mgbb8o96pc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1qazNPVEZGTmtGQlEwRTNNa0pGT0RNeE1qUTJSamMzUVRRM1JqRTFSalF3UkRNME5qVkVSQSJ9.eyJodHRwczovLzhiYXNlLmNvbS92aXNpdG9yX2lkIjoiY2EzMWJkMTUtZjk2My00NmRiLTk4NWItMDIxZDQzMjEyZjdmIiwiaHR0cHM6Ly84YmFzZS5jb20vY3JlYXRlZF9hdCI6IjIwMjAtMDYtMTVUMTg6MDg6MTcuNDA3WiIsImdpdmVuX25hbWUiOiJFZHVhcmRvIiwiZmFtaWx5X25hbWUiOiJNw6FycXVleiIsIm5pY2tuYW1lIjoiZWR1YXJkbzIwLjMyNjMiLCJuYW1lIjoiRWR1YXJkbyBNw6FycXVleiIsInBpY3R1cmUiOiJodHRwczovL3MuZ3JhdmF0YXIuY29tL2F2YXRhci8xNGM3OGE2MGU2OWVhNWRiODc4Yjc3ZjZkMWRhYmE0ZT9zPTQ4MCZyPXBnJmQ9aHR0cHMlM0ElMkYlMkZjZG4uYXV0aDAuY29tJTJGYXZhdGFycyUyRmVkLnBuZyIsInVwZGF0ZWRfYXQiOiIyMDIwLTA2LTE5VDEyOjAyOjI4LjMxM1oiLCJlbWFpbCI6ImVkdWFyZG8yMC4zMjYzQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJpc3MiOiJodHRwczovLzhiYXNlLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZWU3YjkxMTNjMjYxYzAwMTM3OTFlZDciLCJhdWQiOiJxR0haVnU1Q3hZNWtsaXZtMjhPUExqb3B2c1lwMGJhRCIsImlhdCI6MTU5MjU2ODE0OCwiZXhwIjoxNTkyNjA0MTQ4fQ.Rbpt8aGtOdFKFjG-m41EpS-3JZ8JfEsor-Knp16DyceiTyjXWEyzAIdx3LqSrKBxFPn9novFbegPB_Q1moYWvh5Bm1ZW1Ch8PM8LBMQxHGveVbraHP_9u2Fa6JGDiy7iL94TTD_q5c2qf7ilYOhXPvQteWOxuBNq5nirVwng6j7zCOzLZ7qkAkQ2Uz8LU7vWKZMjA-1CjpgUNZL73-qhjmt9Sl8Dhnm5ZO6h2ii71ybPEe41C2Gln1OMvMwhAaw-ArUDSNhXPKBP_evVKarVkiSGz1IJidGY-PCmMszRNiexNl2d_2xLNyEm3901OEOP0IQef_o_AA5d1Q3aS4rExQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation {\r\n  taskCreate(data: {\r\n    name: \"Task #7\",\r\n    description: \"Example #7\",\r\n    isCompleted: false,\r\n    users: {\r\n      connect: {\r\n        id: \"ckbj5o3mc00th08mmaty0b4ge\",\r\n        email: \"denger@mail.com\"\r\n      }\r\n    }\r\n  }) {\r\n    id\r\n    name\r\n    description\r\n    isCompleted\r\n    users {\r\n      email\r\n      firstName\r\n      lastName\r\n    }\r\n    createdAt\r\n    updatedAt\r\n    createdBy {\r\n      email\r\n      firstName\r\n      lastName\r\n    }\r\n    \r\n  }\r\n}",
+						"variables": ""
+					},
+					"options": {
+						"graphql": {}
+					}
+				},
+				"url": {
+					"raw": "https://api.8base.com/ckbgtagfz000207mgbb8o96pc",
+					"protocol": "https",
+					"host": [
+						"api",
+						"8base",
+						"com"
+					],
+					"path": [
+						"ckbgtagfz000207mgbb8o96pc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task Update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1qazNPVEZGTmtGQlEwRTNNa0pGT0RNeE1qUTJSamMzUVRRM1JqRTFSalF3UkRNME5qVkVSQSJ9.eyJodHRwczovLzhiYXNlLmNvbS92aXNpdG9yX2lkIjoiY2EzMWJkMTUtZjk2My00NmRiLTk4NWItMDIxZDQzMjEyZjdmIiwiaHR0cHM6Ly84YmFzZS5jb20vY3JlYXRlZF9hdCI6IjIwMjAtMDYtMTVUMTg6MDg6MTcuNDA3WiIsImdpdmVuX25hbWUiOiJFZHVhcmRvIiwiZmFtaWx5X25hbWUiOiJNw6FycXVleiIsIm5pY2tuYW1lIjoiZWR1YXJkbzIwLjMyNjMiLCJuYW1lIjoiRWR1YXJkbyBNw6FycXVleiIsInBpY3R1cmUiOiJodHRwczovL3MuZ3JhdmF0YXIuY29tL2F2YXRhci8xNGM3OGE2MGU2OWVhNWRiODc4Yjc3ZjZkMWRhYmE0ZT9zPTQ4MCZyPXBnJmQ9aHR0cHMlM0ElMkYlMkZjZG4uYXV0aDAuY29tJTJGYXZhdGFycyUyRmVkLnBuZyIsInVwZGF0ZWRfYXQiOiIyMDIwLTA2LTE5VDEyOjAyOjI4LjMxM1oiLCJlbWFpbCI6ImVkdWFyZG8yMC4zMjYzQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJpc3MiOiJodHRwczovLzhiYXNlLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZWU3YjkxMTNjMjYxYzAwMTM3OTFlZDciLCJhdWQiOiJxR0haVnU1Q3hZNWtsaXZtMjhPUExqb3B2c1lwMGJhRCIsImlhdCI6MTU5MjU2ODE0OCwiZXhwIjoxNTkyNjA0MTQ4fQ.Rbpt8aGtOdFKFjG-m41EpS-3JZ8JfEsor-Knp16DyceiTyjXWEyzAIdx3LqSrKBxFPn9novFbegPB_Q1moYWvh5Bm1ZW1Ch8PM8LBMQxHGveVbraHP_9u2Fa6JGDiy7iL94TTD_q5c2qf7ilYOhXPvQteWOxuBNq5nirVwng6j7zCOzLZ7qkAkQ2Uz8LU7vWKZMjA-1CjpgUNZL73-qhjmt9Sl8Dhnm5ZO6h2ii71ybPEe41C2Gln1OMvMwhAaw-ArUDSNhXPKBP_evVKarVkiSGz1IJidGY-PCmMszRNiexNl2d_2xLNyEm3901OEOP0IQef_o_AA5d1Q3aS4rExQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation {\r\n  taskUpdate(data: {\r\n    id: \"ckbj5owrp00vj08mm11daddqm\",\r\n    name: \"Task #1 v2\",\r\n    description: \"Hello World #2\",\r\n    isCompleted: false,\r\n    users: {\r\n      connect: {\r\n        id: \"ckbj5o3mc00th08mmaty0b4ge\",\r\n        email: \"denger@mail.com\"\r\n      }\r\n    }\r\n  }) {\r\n    id\r\n    name\r\n    description\r\n    isCompleted\r\n    users {\r\n      email\r\n      firstName\r\n      lastName\r\n    }\r\n    createdAt\r\n    updatedAt\r\n    createdBy {\r\n      email\r\n      firstName\r\n      lastName\r\n    }\r\n    \r\n  }\r\n}",
+						"variables": ""
+					},
+					"options": {
+						"graphql": {}
+					}
+				},
+				"url": {
+					"raw": "https://api.8base.com/ckbgtagfz000207mgbb8o96pc",
+					"protocol": "https",
+					"host": [
+						"api",
+						"8base",
+						"com"
+					],
+					"path": [
+						"ckbgtagfz000207mgbb8o96pc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task Is Completed",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1qazNPVEZGTmtGQlEwRTNNa0pGT0RNeE1qUTJSamMzUVRRM1JqRTFSalF3UkRNME5qVkVSQSJ9.eyJodHRwczovLzhiYXNlLmNvbS92aXNpdG9yX2lkIjoiY2EzMWJkMTUtZjk2My00NmRiLTk4NWItMDIxZDQzMjEyZjdmIiwiaHR0cHM6Ly84YmFzZS5jb20vY3JlYXRlZF9hdCI6IjIwMjAtMDYtMTVUMTg6MDg6MTcuNDA3WiIsImdpdmVuX25hbWUiOiJFZHVhcmRvIiwiZmFtaWx5X25hbWUiOiJNw6FycXVleiIsIm5pY2tuYW1lIjoiZWR1YXJkbzIwLjMyNjMiLCJuYW1lIjoiRWR1YXJkbyBNw6FycXVleiIsInBpY3R1cmUiOiJodHRwczovL3MuZ3JhdmF0YXIuY29tL2F2YXRhci8xNGM3OGE2MGU2OWVhNWRiODc4Yjc3ZjZkMWRhYmE0ZT9zPTQ4MCZyPXBnJmQ9aHR0cHMlM0ElMkYlMkZjZG4uYXV0aDAuY29tJTJGYXZhdGFycyUyRmVkLnBuZyIsInVwZGF0ZWRfYXQiOiIyMDIwLTA2LTE5VDIyOjEwOjUxLjkxNVoiLCJlbWFpbCI6ImVkdWFyZG8yMC4zMjYzQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJpc3MiOiJodHRwczovLzhiYXNlLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZWU3YjkxMTNjMjYxYzAwMTM3OTFlZDciLCJhdWQiOiJxR0haVnU1Q3hZNWtsaXZtMjhPUExqb3B2c1lwMGJhRCIsImlhdCI6MTU5MjYwNDY1MiwiZXhwIjoxNTkyNjQwNjUyfQ.fAy8GCCtdhwuhY4vbsNUYmsRRsT1dfnsok1Lg30qtHBFbaIo6G3I3_3-sv_9QjIIaTPdYv1re70VwfYm8V43kQ2A1z_ZU4iynjjxVN7n2-b1Ms-0W_Kyzgr7Dy47_0kL3bydTVIKOWbtY04FJSVrSoZBe5mdLMZHhuSg_7hNu6I50wrzaXf1c-Z9_k_Ee1Y5jWk3FlaEr4aJJTtHHe7jMiCSFDJeE80h_z-SN68OrIbkOHa29NtzYlNzznz-0MZwTerFtpAU-YUpG_488mUbfxi9sPuatz2bUJotypB2YUnDmDt664bRyfe_D_brFonaUEqhQ7RjwFTPGDy-JCDOAw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "https://api.8base.com/ckbgtagfz000207mgbb8o96pc/webhook/tasks/ckbmrogin004508ju8tgwgib6",
+					"protocol": "https",
+					"host": [
+						"api",
+						"8base",
+						"com"
+					],
+					"path": [
+						"ckbgtagfz000207mgbb8o96pc",
+						"webhook",
+						"tasks",
+						"ckbmrogin004508ju8tgwgib6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task Delete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1qazNPVEZGTmtGQlEwRTNNa0pGT0RNeE1qUTJSamMzUVRRM1JqRTFSalF3UkRNME5qVkVSQSJ9.eyJodHRwczovLzhiYXNlLmNvbS92aXNpdG9yX2lkIjoiY2EzMWJkMTUtZjk2My00NmRiLTk4NWItMDIxZDQzMjEyZjdmIiwiaHR0cHM6Ly84YmFzZS5jb20vY3JlYXRlZF9hdCI6IjIwMjAtMDYtMTVUMTg6MDg6MTcuNDA3WiIsImdpdmVuX25hbWUiOiJFZHVhcmRvIiwiZmFtaWx5X25hbWUiOiJNw6FycXVleiIsIm5pY2tuYW1lIjoiZWR1YXJkbzIwLjMyNjMiLCJuYW1lIjoiRWR1YXJkbyBNw6FycXVleiIsInBpY3R1cmUiOiJodHRwczovL3MuZ3JhdmF0YXIuY29tL2F2YXRhci8xNGM3OGE2MGU2OWVhNWRiODc4Yjc3ZjZkMWRhYmE0ZT9zPTQ4MCZyPXBnJmQ9aHR0cHMlM0ElMkYlMkZjZG4uYXV0aDAuY29tJTJGYXZhdGFycyUyRmVkLnBuZyIsInVwZGF0ZWRfYXQiOiIyMDIwLTA2LTE3VDA5OjQwOjI4LjA4N1oiLCJlbWFpbCI6ImVkdWFyZG8yMC4zMjYzQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJpc3MiOiJodHRwczovLzhiYXNlLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZWU3YjkxMTNjMjYxYzAwMTM3OTFlZDciLCJhdWQiOiJxR0haVnU1Q3hZNWtsaXZtMjhPUExqb3B2c1lwMGJhRCIsImlhdCI6MTU5MjM4NjgyOCwiZXhwIjoxNTkyNDIyODI4fQ.Zu0r4dO4zDsVEOB5hXJvRaMJ8jbRraBCtT-QkIwZYOVYs41scCeXJVTUnMKlqW8CGhCfuAI08lDqIhbHzgIRtuYcAuTniIiJrF1lXVG39Zi6Zxml0N6P7vsqbuXeC7vnj0U2rIdNENuVF-bZiSmD_P722T0Lep-YVQrQAsvjnEalQWYWCtrejs3U3YkxRgy1zgMdEa8hxz1qasAGcOKr2FWvkWzqH1j9PwwqWedpUVR-JtMnSsIgb-mNP-7Nbwu_ZBkC8UuZBhXjFbiR1x_MpS0aQJuvYhFA4Fzf5zpmmTLJUcUjSxOgO2NzoTLZFZvtzjjEAxzGQF0mtKYA8nuT_g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation {\r\n  taskDelete(data: {\r\n    id: \"ckbj72wkv002x07l44kdc7d7o\"\r\n  }), {\r\n    success\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "https://api.8base.com/ckbgtagfz000207mgbb8o96pc",
+					"protocol": "https",
+					"host": [
+						"api",
+						"8base",
+						"com"
+					],
+					"path": [
+						"ckbgtagfz000207mgbb8o96pc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation {\r\n  userLogin(data: {\r\n    email: \"eduardo20.3263@gmail.com\",\r\n    password: \"$8base123\"\r\n  }) {\r\n    success\r\n    auth {\r\n      idToken\r\n    }\r\n  }\r\n}",
+						"variables": ""
+					},
+					"options": {
+						"graphql": {}
+					}
+				},
+				"url": {
+					"raw": "https://api.8base.com/ckbgtagfz000207mgbb8o96pc",
+					"protocol": "https",
+					"host": [
+						"api",
+						"8base",
+						"com"
+					],
+					"path": [
+						"ckbgtagfz000207mgbb8o96pc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User List Without Administrators",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1qazNPVEZGTmtGQlEwRTNNa0pGT0RNeE1qUTJSamMzUVRRM1JqRTFSalF3UkRNME5qVkVSQSJ9.eyJodHRwczovLzhiYXNlLmNvbS92aXNpdG9yX2lkIjoiY2EzMWJkMTUtZjk2My00NmRiLTk4NWItMDIxZDQzMjEyZjdmIiwiaHR0cHM6Ly84YmFzZS5jb20vY3JlYXRlZF9hdCI6IjIwMjAtMDYtMTVUMTg6MDg6MTcuNDA3WiIsImdpdmVuX25hbWUiOiJFZHVhcmRvIiwiZmFtaWx5X25hbWUiOiJNw6FycXVleiIsIm5pY2tuYW1lIjoiZWR1YXJkbzIwLjMyNjMiLCJuYW1lIjoiRWR1YXJkbyBNw6FycXVleiIsInBpY3R1cmUiOiJodHRwczovL3MuZ3JhdmF0YXIuY29tL2F2YXRhci8xNGM3OGE2MGU2OWVhNWRiODc4Yjc3ZjZkMWRhYmE0ZT9zPTQ4MCZyPXBnJmQ9aHR0cHMlM0ElMkYlMkZjZG4uYXV0aDAuY29tJTJGYXZhdGFycyUyRmVkLnBuZyIsInVwZGF0ZWRfYXQiOiIyMDIwLTA2LTE5VDIyOjEwOjUxLjkxNVoiLCJlbWFpbCI6ImVkdWFyZG8yMC4zMjYzQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJpc3MiOiJodHRwczovLzhiYXNlLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZWU3YjkxMTNjMjYxYzAwMTM3OTFlZDciLCJhdWQiOiJxR0haVnU1Q3hZNWtsaXZtMjhPUExqb3B2c1lwMGJhRCIsImlhdCI6MTU5MjYwNDY1MiwiZXhwIjoxNTkyNjQwNjUyfQ.fAy8GCCtdhwuhY4vbsNUYmsRRsT1dfnsok1Lg30qtHBFbaIo6G3I3_3-sv_9QjIIaTPdYv1re70VwfYm8V43kQ2A1z_ZU4iynjjxVN7n2-b1Ms-0W_Kyzgr7Dy47_0kL3bydTVIKOWbtY04FJSVrSoZBe5mdLMZHhuSg_7hNu6I50wrzaXf1c-Z9_k_Ee1Y5jWk3FlaEr4aJJTtHHe7jMiCSFDJeE80h_z-SN68OrIbkOHa29NtzYlNzznz-0MZwTerFtpAU-YUpG_488mUbfxi9sPuatz2bUJotypB2YUnDmDt664bRyfe_D_brFonaUEqhQ7RjwFTPGDy-JCDOAw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\r\n  usersList(filter: {\r\n    roles: {\r\n      none: {\r\n        name: {\r\n          equals: \"Administrator\"\r\n        }\r\n      }\r\n    }\r\n  }) {\r\n    items {\r\n      id\r\n      email\r\n    }\r\n  }\r\n}",
+						"variables": ""
+					},
+					"options": {
+						"graphql": {}
+					}
+				},
+				"url": {
+					"raw": "https://api.8base.com/ckbgtagfz000207mgbb8o96pc",
+					"protocol": "https",
+					"host": [
+						"api",
+						"8base",
+						"com"
+					],
+					"path": [
+						"ckbgtagfz000207mgbb8o96pc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1qazNPVEZGTmtGQlEwRTNNa0pGT0RNeE1qUTJSamMzUVRRM1JqRTFSalF3UkRNME5qVkVSQSJ9.eyJodHRwczovLzhiYXNlLmNvbS92aXNpdG9yX2lkIjoiY2EzMWJkMTUtZjk2My00NmRiLTk4NWItMDIxZDQzMjEyZjdmIiwiaHR0cHM6Ly84YmFzZS5jb20vY3JlYXRlZF9hdCI6IjIwMjAtMDYtMTVUMTg6MDg6MTcuNDA3WiIsImdpdmVuX25hbWUiOiJFZHVhcmRvIiwiZmFtaWx5X25hbWUiOiJNw6FycXVleiIsIm5pY2tuYW1lIjoiZWR1YXJkbzIwLjMyNjMiLCJuYW1lIjoiRWR1YXJkbyBNw6FycXVleiIsInBpY3R1cmUiOiJodHRwczovL3MuZ3JhdmF0YXIuY29tL2F2YXRhci8xNGM3OGE2MGU2OWVhNWRiODc4Yjc3ZjZkMWRhYmE0ZT9zPTQ4MCZyPXBnJmQ9aHR0cHMlM0ElMkYlMkZjZG4uYXV0aDAuY29tJTJGYXZhdGFycyUyRmVkLnBuZyIsInVwZGF0ZWRfYXQiOiIyMDIwLTA2LTE5VDAwOjU1OjQ0LjIzN1oiLCJlbWFpbCI6ImVkdWFyZG8yMC4zMjYzQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJpc3MiOiJodHRwczovLzhiYXNlLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1ZWU3YjkxMTNjMjYxYzAwMTM3OTFlZDciLCJhdWQiOiJxR0haVnU1Q3hZNWtsaXZtMjhPUExqb3B2c1lwMGJhRCIsImlhdCI6MTU5MjUyODE0NCwiZXhwIjoxNTkyNTY0MTQ0fQ.i0gvDLDD6fCns9P5nMaaTDlnevUCPsppPkEkyIGPTekeoNpCXRY60rOqjfSG7goaVkfpi8i2q4ANRzve0FKEE0mMvhtzuUYcW5bqK-CvGJ1_Hd8x7B_JYl_1cfuo6cP19e8WAOhORnjr0LiSlGaHiMFpUc8U-gCwJSAFSn6_TytDAVKpExP-4WEoGRdkuryzN0ho0KTCvRQjo0xznFHNWUcXS4QUscj3Z_Yt-6lOP1V1PuvVb8oqqOvh8hdhXD6WQDpwFd39R71XMixqmqVaboaAEcavAqwcMbcLoEJ6ky3moUTRxpexUd3t3npOt7vU8Rp7w24QbeRgQXtrooyOGg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\r\n  user(email: \"eduardo20.3263@gmail.com\") {\r\n    id\r\n    firstName\r\n    lastName\r\n  }\r\n}",
+						"variables": ""
+					},
+					"options": {
+						"graphql": {}
+					}
+				},
+				"url": {
+					"raw": "https://api.8base.com/ckbgtagfz000207mgbb8o96pc",
+					"protocol": "https",
+					"host": [
+						"api",
+						"8base",
+						"com"
+					],
+					"path": [
+						"ckbgtagfz000207mgbb8o96pc"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,7 @@
+{
+  "baseUrl": "http://localhost:3000",
+  "env": {
+    "loginEmail": "eduardo20.3263@gmail.com",
+    "password": "$8base123"
+  }
+}
